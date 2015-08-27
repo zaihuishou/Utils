@@ -1,6 +1,9 @@
 package cruise.library.util;
 
+import android.app.Activity;
+import android.content.ComponentName;
 import android.content.Context;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.telephony.TelephonyManager;
@@ -8,11 +11,16 @@ import android.telephony.TelephonyManager;
 /**
  * Created by zhiqiang on 8/27/15.
  */
-public class NetWorkUtil {
+public class NetWorkUtil extends BaseUtil {
     public final static String NETWORK_TYPE_WIFI = "WIFI";
     public final static String NETWORK_TYPE_2G = "2G";
     public final static String NETWORK_TYPE_3G = "3G";
     public final static String NETWORK_TYPE_LTE = "4G";
+
+    private NetWorkUtil() {
+        super();
+    }
+
     /**
      * UnKnow type
      */
@@ -27,6 +35,16 @@ public class NetWorkUtil {
     public static boolean isNetWorkConnected(Context context) {
         NetworkInfo networkInfo = getNetWorkInfo(context);
         return networkInfo == null ? false : networkInfo.isConnected();
+    }
+
+    /**
+     * 判断是否为wifi连接
+     *
+     * @param context 上下文
+     * @return
+     */
+    public static boolean isWifi(Context context) {
+        return NETWORK_TYPE_WIFI.equals(getNetWorkType(context));
     }
 
     /**
@@ -68,6 +86,18 @@ public class NetWorkUtil {
                 break;
         }
         return type;
+    }
+
+    /**
+     * 打开网络设置界面
+     */
+    public static void openSetting(Activity activity) {
+        Intent intent = new Intent("/");
+        ComponentName cm = new ComponentName("com.android.settings",
+                "com.android.settings.WirelessSettings");
+        intent.setComponent(cm);
+        intent.setAction("android.intent.action.VIEW");
+        activity.startActivityForResult(intent, 0);
     }
 
     protected static NetworkInfo getNetWorkInfo(Context context) {

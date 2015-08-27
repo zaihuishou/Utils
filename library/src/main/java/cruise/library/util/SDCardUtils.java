@@ -12,11 +12,10 @@ import java.io.File;
 /**
  * SDCard Util
  */
-public class SDCardUtils {
+public class SDCardUtils extends BaseUtil{
 
     private SDCardUtils() {
-        /* cannot be instantiated */
-        throw new UnsupportedOperationException("cannot be instantiated");
+       super();
     }
 
     /**

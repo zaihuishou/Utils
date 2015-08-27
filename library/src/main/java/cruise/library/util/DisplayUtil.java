@@ -7,7 +7,7 @@ import android.view.View;
 /**
  * Created by zhiqiang on 8/24/15.
  */
-public class DisplayUtil {
+public class DisplayUtil extends BaseUtil {
     public static final int UNIT_PX = 0;
     public static final int UNIT_DIP = 1;
     public static final int UNIT_SP = 2;
@@ -15,6 +15,11 @@ public class DisplayUtil {
     public static final int UNIT_IN = 4;
     public static final int UNIT_MM = 5;
     private static DisplayMetrics dm;
+
+    private DisplayUtil() {
+        super();
+    }
+
 
     /**
      * dip 2 px

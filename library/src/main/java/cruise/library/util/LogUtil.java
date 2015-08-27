@@ -5,11 +5,10 @@ import android.util.Log;
 /**
  * Created by zhiqiang on 8/27/15.
  */
-public class LogUtil {
+public class LogUtil extends BaseUtil {
 
     private LogUtil() {
-        /* cannot be instantiated */
-        throw new UnsupportedOperationException("cannot be instantiated");
+        super();
     }
 
     public static boolean isDebug = true;// 是否需要打印bug，可以在application的onCreate函数里面初始化

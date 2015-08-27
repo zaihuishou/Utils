@@ -6,12 +6,12 @@ import android.widget.Toast;
 /**
  * Created by zhiqiang on 8/27/15.
  */
-public class ToastUtil {
+public class ToastUtil extends BaseUtil {
 
     public static boolean isShow = true;
 
     private ToastUtil() {
-        throw new UnsupportedOperationException("cannot be instantiated");
+        super();
     }
 
     /**
