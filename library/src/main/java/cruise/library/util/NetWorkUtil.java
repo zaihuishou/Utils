@@ -1,4 +1,4 @@
-package com.criuse.tan.util;
+package cruise.library.util;
 
 import android.content.Context;
 import android.net.ConnectivityManager;

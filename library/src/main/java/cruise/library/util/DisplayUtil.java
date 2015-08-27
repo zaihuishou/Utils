@@ -1,4 +1,4 @@
-package com.criuse.tan.util;
+package cruise.library.util;
 
 import android.app.Activity;
 import android.util.DisplayMetrics;
