@@ -2,6 +2,7 @@ package com.criuse.tan.util;
 
 import android.app.Activity;
 import android.util.DisplayMetrics;
+import android.view.View;
 
 /**
  * Created by zhiqiang on 8/24/15.
@@ -62,5 +63,15 @@ public class DisplayUtil {
                 return value * metrics.xdpi * (1.0f / 25.4f);
         }
         return 0;
+    }
+
+    /**
+     * Returns the visibility for this view.
+     *
+     * @param v
+     * @return
+     */
+    public static boolean isViewShow(View v) {
+        return v.getVisibility() == View.VISIBLE;
     }
 }

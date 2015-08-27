@@ -1,20 +1,39 @@
 package com.criuse.tan;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
-import com.criuse.tan.util.DisplayUtil;
+import com.criuse.tan.util.NetWorkUtil;
 
 public class MainActivity extends AppCompatActivity {
+    private Button button;
+    private Button button2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toast.makeText(this, String.valueOf(DisplayUtil.getDip2Px(this, 1)), Toast.LENGTH_LONG).show();
+        button = (Button) findViewById(R.id.btn);
+        button2 = (Button) findViewById(R.id.btn2);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                boolean netWorkContected = NetWorkUtil.isNetWorkConnected(MainActivity.this);
+                Toast.makeText(MainActivity.this, "网络是否连接:" + netWorkContected, Toast.LENGTH_LONG).show();
+            }
+        });
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String netWorkType = NetWorkUtil.getNetWorkType(MainActivity.this);
+                Toast.makeText(MainActivity.this, "网络类型:" + netWorkType, Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     @Override
