@@ -3,7 +3,7 @@ package com.criuse.tan.app;
 import android.app.Application;
 
 import com.criuse.tan.R;
-import cruise.library.util.LogUtil;
+import org.cruise.utils.LogUtil;
 
 /**
  * Created by zhiqiang on 8/27/15.

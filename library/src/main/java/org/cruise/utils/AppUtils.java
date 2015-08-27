@@ -1,4 +1,4 @@
-package cruise.library.util;
+package org.cruise.utils;
 
 import android.content.Context;
 import android.content.pm.PackageInfo;

@@ -1,4 +1,4 @@
-package cruise.library.util;
+package org.cruise.utils;
 
 /**
  * Created by zhiqiang on 8/27/15.

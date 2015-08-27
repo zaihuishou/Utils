@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import com.criuse.tan.R;
 
-import cruise.library.util.NetWorkUtil;
+import org.cruise.utils.NetWorkUtil;
 
 public class MainActivity extends AppCompatActivity {
     private Button button;
