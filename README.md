@@ -1,8 +1,8 @@
 # Android Common Tools
 * AppUtil
 
-  1.getAppName
-  2.getVersionName
+  1. getAppName
+  2. getVersionName
 
 * DisplayUtil
 * KeyBoardUtil
