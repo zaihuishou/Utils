@@ -1,2 +1,2 @@
-# Utils
-Android Common Tools
+# Android Common Tools
+* AppUtil
