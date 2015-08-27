@@ -12,9 +12,9 @@ import java.io.File;
 /**
  * SDCard Util
  */
-public class SDCardUtils extends BaseUtil{
+public class SDCardUtil extends BaseUtil{
 
-    private SDCardUtils() {
+    private SDCardUtil() {
        super();
     }
 

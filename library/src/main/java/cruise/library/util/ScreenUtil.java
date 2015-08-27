@@ -15,9 +15,9 @@ import android.view.WindowManager;
 /**
  * 获得屏幕相关的辅助类
  */
-public class ScreenUtils extends BaseUtil{
+public class ScreenUtil extends BaseUtil{
 
-    private ScreenUtils() {
+    private ScreenUtil() {
         super();
     }
 

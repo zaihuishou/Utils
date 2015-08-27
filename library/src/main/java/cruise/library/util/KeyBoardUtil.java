@@ -7,10 +7,10 @@ import android.widget.EditText;
 /**
  * Created by zhiqiang on 8/27/15.
  */
-public class KeyBoardUtils extends BaseUtil {
+public class KeyBoardUtil extends BaseUtil {
 
 
-    private KeyBoardUtils() {
+    private KeyBoardUtil() {
         super();
     }
 
