@@ -27,11 +27,6 @@ public class KeyBoardUtil extends BaseUtil {
                 InputMethodManager.HIDE_IMPLICIT_ONLY);
     }
 
-    protected static InputMethodManager getInputMethodManager(Context mContext) {
-        return (InputMethodManager) mContext
-                    .getSystemService(Context.INPUT_METHOD_SERVICE);
-    }
-
     /**
      * 关闭软键盘
      *
@@ -43,4 +38,10 @@ public class KeyBoardUtil extends BaseUtil {
 
         imm.hideSoftInputFromWindow(mEditText.getWindowToken(), 0);
     }
+
+    protected static InputMethodManager getInputMethodManager(Context mContext) {
+        return (InputMethodManager) mContext
+                .getSystemService(Context.INPUT_METHOD_SERVICE);
+    }
+
 }
